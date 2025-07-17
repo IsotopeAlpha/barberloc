@@ -44,12 +44,9 @@ class MyTextFormField extends StatelessWidget {
         decoration: InputDecoration(
           fillColor: Colors.white,
           border: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(30)),
-              borderSide: BorderSide(width: 10, color: AppColors.greenColor,)),
-          prefixIconColor: AppColors.greenColor,
+            borderRadius: BorderRadius.all(Radius.circular(30))),
+          prefixIconColor: AppColors.whiteColor,
           suffixIconColor: AppColors.greyColor,
-          focusColor: AppColors.greenColor,
-          hoverColor: AppColors.greenColor,
           suffixIcon: obscure == true
               ? InkWell(
                   child: const Icon(Icons.visibility),
@@ -68,7 +65,7 @@ class MyTextFormField extends StatelessWidget {
                       },
                     ),
           labelText: label,
-          iconColor: AppColors.greenColor,
+          iconColor: AppColors.whiteColor,
           hintText: hintText,
           helperText: helperText,
           prefixIcon: icon,

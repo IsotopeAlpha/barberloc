@@ -41,6 +41,7 @@ class _SignUpPageState extends State<SignUpPage> {
         padding: EdgeInsets.all(20.sp),
         width: 100.w,
         height: 100.h,
+        color: AppColors.defaultColor,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -59,6 +60,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 key: _formKey,
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 child: Column(
+                  spacing: 20,
                   children: [
                     MyTextFormField(
                       inputType: TextInputType.emailAddress,
@@ -83,14 +85,6 @@ class _SignUpPageState extends State<SignUpPage> {
                       },
                       icon: const Icon(Icons.contact_page),
                     ),
-                    Divider(
-                      height: 0.5.h,
-                      color: AppColors.whiteColor,
-                    ),
-                    Divider(
-                      height: 0.5.h,
-                      color: AppColors.whiteColor,
-                    ),
                     MyTextFormField(
                       inputType: TextInputType.number,
                       validator: Validators().reqPhoneValidator,
@@ -103,10 +97,6 @@ class _SignUpPageState extends State<SignUpPage> {
                       },
                       icon: const Icon(Icons.phone),
                     ),
-                    Divider(
-                      height: 0.5.h,
-                      color: AppColors.whiteColor,
-                    ),
                     MyTextFormField(
                       validator: Validators().reqPasswordValidator,
                       obscure: true,
@@ -118,10 +108,6 @@ class _SignUpPageState extends State<SignUpPage> {
                         });
                       },
                       icon: const Icon(Icons.lock),
-                    ),
-                    Divider(
-                      height: 1.h,
-                      color: AppColors.whiteColor,
                     ),
                     TextButton(
                         onPressed: () {
@@ -242,18 +228,13 @@ class _SignUpPageState extends State<SignUpPage> {
                           text: 'REGISTER',
                           fontWeight: FontWeight.bold,
                         )),
-                    Divider(
-                      height: 5.sp,
-                      color: AppColors.whiteColor,
-                    ),
                     InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/login');
                       },
-                      splashColor: AppColors.redColor,
                       child: MyText(
                         text: "Already Have An Account? Login!",
-                        color: AppColors.greenColor,
+                        color: AppColors.blackColor,
                       ),
                     )
                   ],

@@ -26,6 +26,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Container(
           width: 100.w,
           height: 100.h,
+          color: AppColors.defaultColor,
           alignment: Alignment.center,
           padding: const EdgeInsets.all(20.0),
           child: SingleChildScrollView(
@@ -48,6 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                   key: _formKey,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   child: Column(
+                    spacing: 20,
                     children: [
                       MyTextFormField(
                         inputType: TextInputType.emailAddress,
@@ -61,10 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                         },
                         icon: const Icon(Icons.email),
                       ),
-                      Divider(
-                        height: 0.5.h,
-                        color: AppColors.whiteColor,
-                      ),
+                      
                       MyTextFormField(
                         inputType: TextInputType.visiblePassword,
                         validator: Validators().reqPasswordValidator,
@@ -78,10 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                         },
                         icon: const Icon(Icons.lock_open_sharp),
                       ),
-                      Divider(
-                        height: 1.h,
-                        color: AppColors.whiteColor,
-                      ),
+                      
                       ElevatedButton(
                           onPressed: () {
                             Navigator.pushNamed(
@@ -158,33 +154,25 @@ class _LoginPageState extends State<LoginPage> {
                             fontWeight: FontWeight.bold,
                             
                           )),
-                      Divider(
-                        height: 10.sp,
-                        color: AppColors.whiteColor,
-                      ),
+                      
                       InkWell(
                         onTap: () {
                           // Navigator.pushNamed(
                           //     context, Routes.forgotPassword);
                         },
-                        splashColor: AppColors.redColor,
                         child: MyText(
                           text: "Forgot Password?",
-                          color: AppColors.greenColor,
+                          color: AppColors.blackColor,
                         ),
                       ),
-                      Divider(
-                        height: 10.sp,
-                        color: AppColors.whiteColor,
-                      ),
+                      
                       InkWell(
                         onTap: () {
                           Navigator.pushNamed(context, '/register');
                         },
-                        splashColor: AppColors.redColor,
                         child: MyText(
                           text: "No Account? Register!",
-                          color: AppColors.greenColor,
+                          color: AppColors.blackColor,
                         ),
                       ),
                     ],

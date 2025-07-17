@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return Sizer(builder: ((context, orientation, deviceType) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(primarySwatch: AppColors.greenColor, primaryColor: AppColors.greenColor, focusColor: AppColors.whiteColor),
+        theme: ThemeData(primaryColor: AppColors.defaultColor, focusColor: AppColors.whiteColor),
         home: const LandingPage(),
         routes: Routes.registerRoutes(),
       );
